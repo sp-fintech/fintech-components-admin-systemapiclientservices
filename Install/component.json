@@ -1,0 +1,72 @@
+{
+	"name" : "Api Client Services",
+	"route" : "system/api/client/services",
+	"description" : "List Api client services via this component",
+	"module_type" : "components",
+	"app_type" : "fintech",
+	"category" : "admin",
+	"version" : "0.0.0",
+	"repo" : "https://github.com/sp-fintech/fintech-components-admin-systemapiclientservices",
+	"class" : "Apps\\Fintech\\Components\\System\\Api\\Client\\Services\\ServicesComponent",
+	"dependencies" : 
+	{
+		"core" : 
+		{
+			"name" : "Core",
+			"version" : "0.0.0-rc.9",
+			"repo" : "https://github.com/sp-framework/core"
+		},
+		"components" : [],
+		"packages" : [],
+		"middlewares" : [],
+		"views" : [],
+		"external" : [],
+		"externals" : [],
+		"apptype" : 
+		{
+			"name" : "Fintech",
+			"version" : "0.3.0",
+			"repo" : "https://github.com/sp-fintech/fintech"
+		}
+	},
+	"menu" : 
+	{
+		"seq" : 7,
+		"system" : 
+		{
+			"icon" : "cogs",
+			"title" : "system",
+			"childs" : 
+			{
+				"api" : 
+				{
+					"title" : "api",
+					"icon" : "exchange-alt",
+					"childs" : 
+					{
+						"client" : 
+						{
+							"title" : "client",
+							"childs" : 
+							{
+								"services" : 
+								{
+									"title" : "services",
+									"link" : "system/api/client/services"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"settings" : 
+	{
+		"mandatory" : 
+		{
+			"core" : true
+		}
+	},
+	"widgets" : []
+}
