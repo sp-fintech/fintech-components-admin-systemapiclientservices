@@ -39,7 +39,9 @@ class ServicesComponent extends BaseComponent
                 }
 
                 if (isset($api['used_by']) && $api['used_by'] !== '') {
-                    $api['used_by'] = $this->helper->decode($api['used_by'], true);
+                    if (is_string($api['used_by'])) {
+                        $api['used_by'] = $this->helper->decode($api['used_by'], true);
+                    }
                     $api['used_by'] = implode(', ', $api['used_by']);
                 } else if (isset($api['used_by']) && $api['used_by'] === '') {
                     $api['used_by'] = '-';
